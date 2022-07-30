@@ -1,2 +1,2 @@
-web: python manage.py runserver 0.0.0.0:$PORT
+web: gunicorn recom.wsgi:application --log-file - --log-level debug
 release: python manage.py migrate
