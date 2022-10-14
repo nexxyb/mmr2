@@ -77,7 +77,7 @@ def get_movie_rating(movie):
         #print(m_url)
         return movie_details
 
-def get_movie(movie_list):
+def get_movie(movie_list ):
     recom1= []
     recom2 = []
     l_movie_list= []

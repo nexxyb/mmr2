@@ -5,7 +5,8 @@ from . import mmr3
 from recommender.forms import SearchForm
 from django.http import HttpResponseRedirect
 
-# Create your views here.
+#Create your views here.
+
 def index(request):
     """View function for home page of site.""" 
     if request.method == 'POST':
@@ -28,8 +29,28 @@ def index(request):
     }
 
     return render(request, 'recommender/index.html', context=context)
-class AboutView(generic.TemplateView):
-    template_name= 'recommender/about.html'
+
+# class Index(generic.TemplateView):
+#     template_name = 'recommender/index.html'
+#     form = SearchForm()
+    
+#     def get_context_data(self, **kwargs):
+#         context= super(Index, self).get_context_data(**kwargs)
+#         form = SearchForm()
+#         data= form.data
+#         result= mmr3.get_movie([data])
+#         context['result']= result
+#         return context
+    
+#     def form_valid(self, form):
+#         data= form.cleaned_data['movie']
+#         result= mmr3.get_movie([data])
+#         return super().form_valid(form)
+        
+    
+class ReloadView(generic.TemplateView):
+    template_name= 'recommender/index.html'
+    
     
 class ContactView(generic.FormView):
     template_name= 'recommender/contact.html'
