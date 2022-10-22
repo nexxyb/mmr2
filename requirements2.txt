@@ -1,6 +1,0 @@
-# Dependencies for this lab
-requests
-nose
-pinocchio
-coverage
-pylint
