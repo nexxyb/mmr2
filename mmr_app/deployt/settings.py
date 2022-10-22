@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 #DEBUG = env("DEBUG")
 DEBUG = os.environ.get("DEBUG")
 ALLOWED_HOSTS        = ['127.0.0.1', 'localhost',]
-CSRF_TRUSTED_ORIGINS = [ 'http://localhost:80', 'https://localhost:443',]# 'https://:443']
+CSRF_TRUSTED_ORIGINS = [ 'http://localhost:80', 'https://localhost:443','https://ec2-44-208-169-89.compute-1.amazonaws.com:443','https://ec2-44-208-169-89.compute-1.amazonaws.com:80']
 
 
 # Application definition
